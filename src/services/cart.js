@@ -3,8 +3,13 @@
 //casos de uso
 //✅ ->adicionar item no carrinho
 async function addItem(usercart,Item) {
-    usercart.push(Item);
-}
+    const index= usercart.findIndex((item)=>item.name===Item.name);
+    if(index!== -1){
+        usercart[index].quantity+=1;
+        }else{
+        usercart.push(Item);
+    }
+ }
 //->deletar item no carrinho
 async function deleteItem(usercart, name) {
     const index= usercart.findIndex((item)=>item.name===name);

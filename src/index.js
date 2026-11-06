@@ -12,6 +12,7 @@ const item2=await creatitem("Funkpop Monk D. Luffy",142.02,3);
 
 //-adcionei dois itens no carrinho
 await cartService.addItem(mycart,item1);
+await cartService.addItem(mycart,item1);''
 await cartService.addItem(mycart,item2);
 
 //await cartService.removeItem(mycart, item1);
